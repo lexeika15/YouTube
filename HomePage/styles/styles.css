@@ -1,83 +1,96 @@
-.width_container {
-    width: 1700px;
-}
-
-.personal_videos,
-.food_drink_videos {
-    height: 280px;
+body {
     margin: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+.width_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#personal_videos,
+#recommended_videos,
+#food_drink_videos {
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
 .header_section {
-    height: 50px;
     display: flex;
+    position: relative;
 }
 
 .header_section img {
     width: 50px;
-    height: 100%;
+    height: 50px;
     border-radius: 50%;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .header_section  h1 {
-    width: 135px;
-    height: 33px;
     font-family: 'Mulish', sans-serif;
+    white-space: nowrap;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 2.6rem;
     line-height: 100%;
     letter-spacing: 0px;
-    margin: 12px 0 5px 0;
+    margin: 12px 20px 5px 0;
 }
 
 .scroll_arrows_container {
-    width: 66px;
-    height: 28px;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    margin: 22px 0 0 1245px;
+    top: 22px;
+    left: 1450px;
+    gap: 10px;
 }
 
 .scroll_arrows_container img {
     width: 28px;
-    height: 100%;
+    height: 28px;
     margin: 0;
 }
 
 .videos_container{
-    width: 100%;
-    height: 200px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    margin: 28px 0 0 0;
+    margin-top: 28px;
 }
 
 .personal_video,
+.recommended_video,
 .food_video {
-    width: 250px;
+    flex-grow: 1;
 }
 
 .image_container {
     display: flex;
-    height: 150px;
+    position: relative;
 }
 
 .image_container img {
-    width: 100%;
+    width: 250px;
+    height: 150px;
     border-radius: 14px;
+    object-fit: cover;
     display: block;
 }
 
 .video_duration {
     position: absolute;
+    bottom: 8px;
+    right: 8px;
     background-color: black;
     opacity: 70%;
     width: 47px;
     height: 24px;
     border-radius: 12px;
-    margin: 116px 0 0 193px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +99,7 @@
 .video_duration span {
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 100%;
     letter-spacing: 0px;
     color: white;
@@ -95,13 +108,12 @@
 .videos_container h2{
     font-family: 'Mulish', sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 100%;
     letter-spacing: 0px;
     color: #19202C;
     margin: 10px 0 4px 0;
 }
-
 
 .video_details {
     display: flex;
@@ -109,62 +121,25 @@
 }
 
 .video_details span,
-.food_drink_videos .header_section span,
+#food_drink_videos .header_section span,
 .subscribe_button {
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 1.3rem;
     line-height: 100%;
     letter-spacing: 0px;
     color: #C2C2C2;
 }
 
-.recommended_videos {
-    margin-top: 49px;
-    height: 363px;
-}
-
-.recommended_videos .header_section {
-    height: 33px;
-}
-
-.recommended_videos .header_section h1 {
-    width: 185px;
-    margin: 8px 0 9px 0;
-}
-
-.recommended_videos .header_section .scroll_arrows_container {
-    margin: 5px 0 0 1265px;
-}
-
-.recommended_videos .videos_container {
-    height: 300px;
-}
-
-.recommended_video {
+.recommended_video .image_container img {
     width: 540px;
-}
-
-.recommended_video .image_container {
     height: 250px;
 }
 
-.recommended_video .image_container .video_duration {
-    margin: 216px 0 0 483px;
-}
-
-.food_drink_videos {
-    margin-top: 50px;
-}
-
-.food_drink_videos .header_section h1 {
-    width: 161px;
-    margin-right: 19px;
-}
-
-.food_drink_videos .header_section span {
-    font-size: 16px;
-    margin: 19px 777px 0 0;
+#food_drink_videos .header_section span {
+    font-size: 1.6rem;
+    margin: 20px 780px 0 0;
+    white-space: nowrap;
 }
 
 .subscribe_button {
@@ -173,11 +148,9 @@
     border: none;
     border-radius: 20px;
     background-color: red ;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: white;
     margin-top: 10px;
-}
-
-.food_drink_videos .header_section .scroll_arrows_container {
-    margin: 16px 0 0 48px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
