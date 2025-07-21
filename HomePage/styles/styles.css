@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -8,7 +9,7 @@ html {
 
 .width_container {
     width: 100%;
-    margin: 0 auto;
+    box-sizing: border-box;
     padding: 0 20px;
 }
 
@@ -21,15 +22,19 @@ html {
 
 .header_section {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+}
+
+.header_logo,
+.button_arrows {
+    display: flex;
+    gap: 20px;
 }
 
 .header_section img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-right: 20px;
-    flex-shrink: 0;
 }
 
 .header_section  h1 {
@@ -39,15 +44,13 @@ html {
     font-size: 2.6rem;
     line-height: 100%;
     letter-spacing: 0px;
-    margin: 12px 20px 5px 0;
+    margin: 12px 0 5px 0;
 }
 
 .scroll_arrows_container {
-    position: absolute;
     display: flex;
-    top: 22px;
-    left: 1450px;
     gap: 10px;
+    margin: 22px 184px 0 0;
 }
 
 .scroll_arrows_container img {
@@ -57,25 +60,22 @@ html {
 }
 
 .videos_container{
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    display: flex;   
+    gap: clamp(10px, 2vw, 32px);
     margin-top: 28px;
 }
 
 .personal_video,
 .recommended_video,
 .food_video {
-    flex-grow: 1;
-}
-
-.image_container {
-    display: flex;
+    flex: 1 1;
     position: relative;
 }
 
-.image_container img {
-    width: 250px;
+.personal_video img,
+.recommended_video img,
+.food_video img {
+    width: 100%;
     height: 150px;
     border-radius: 14px;
     object-fit: cover;
@@ -84,8 +84,8 @@ html {
 
 .video_duration {
     position: absolute;
-    bottom: 8px;
-    right: 8px;
+    top: 116px;
+    right: 10px;
     background-color: black;
     opacity: 70%;
     width: 47px;
@@ -131,14 +131,17 @@ html {
     color: #C2C2C2;
 }
 
-.recommended_video .image_container img {
-    width: 540px;
+.recommended_video img {
     height: 250px;
+}
+
+.recommended_video .video_duration {
+    top: 216px;
 }
 
 #food_drink_videos .header_section span {
     font-size: 1.6rem;
-    margin: 20px 780px 0 0;
+    margin-top: 20px;
     white-space: nowrap;
 }
 
