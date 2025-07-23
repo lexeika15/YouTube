@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    overflow-x: hidden;
 }
 
 html {
@@ -8,16 +7,13 @@ html {
 }
 
 .width_container {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 20px;
+    flex-grow: 1700;
 }
 
 #personal_videos,
 #recommended_videos,
 #food_drink_videos {
-    padding-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .header_section {
@@ -50,7 +46,7 @@ html {
 .scroll_arrows_container {
     display: flex;
     gap: 10px;
-    margin: 22px 184px 0 0;
+    margin: 22px 180px 0 0;
 }
 
 .scroll_arrows_container img {
@@ -145,6 +141,10 @@ html {
     white-space: nowrap;
 }
 
+.button_arrows {
+    gap: 34px;
+}
+
 .subscribe_button {
     width: 154px;
     height: 40px;
@@ -156,4 +156,196 @@ html {
     margin-top: 10px;
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+.sidebar {
+    flex-grow: 160;
+}
+
+.navigation_bar,
+.subscriptions_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 58px;
+}
+
+.navigation_bar_element,
+.subscriptions_list_element,
+.settings {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.navigation_bar_element img,
+.settings img {
+    width: 20px;
+    height: 20px;
+}
+
+.navigation_bar_element.show_more img {
+    height: 8px;
+}
+
+.navigation_bar_element span,
+.subscriptions_list_element span,
+.settings span {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #898989;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.navigation_bar_element.home span {
+    color: #FF0000;
+}
+
+.navigation_bar_element.subscriptions {
+    padding-bottom: 32px;
+}
+
+.subscriptions_list {
+    gap: 24px;
+    margin-bottom: 104px;
+}
+
+.subscriptions_header {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    color: #000000;
+    margin: 0 0 30px 0;
+}
+
+.subscriptions_list_element {
+    gap: 10px;
+}
+
+.subscriptions_list_element img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+
+.settings {
+    margin-bottom: 40px;
+}
+
+.main_layout {
+    display: flex;
+    gap: 66px;
+    padding: 50px 0 0 30px;
+}
+
+.youtube_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 30px;
+}
+
+.logo_youtube_search,
+.logo_youtube_stripes,
+.logo_youtube,
+.header_icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.logo_youtube_stripes img {
+    width: 20px;
+    height: 17px;
+}
+
+.logo_youtube {
+    gap: 3px;
+}
+
+.logo_youtube_search {
+    gap: 72px;
+}
+
+.logo_youtube img {
+    width: 38px;
+    height: 25px;
+}
+
+.logo_youtube span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; 
+    font-size: 2rem;
+    color: #000000;
+    letter-spacing: -1px;
+}
+
+.search_wrapper {
+    width: 830px;
+    position: relative;
+}
+
+.custom_input {
+    width: 100%;
+    height: 44px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding: 0 12px;
+    background-color: #EBEBEB;
+    color: #30384C;
+    border: 1px solid #EBEBEB;
+    border-radius: 22px;
+    opacity: 40%;
+    box-sizing: border-box;
+}
+
+.search_wrapper img {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+}
+
+.header_icons {
+    gap: 50px;
+    margin-right: 70px;
+}
+
+.header_icons img {
+    width: 24px;
+    height: 22px;
+}
+
+.header_icons .user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.notifications_container {
+    position: relative;
+}
+
+.notifications_badge {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    background-color: #ff0000;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    text-align: center;
 }
