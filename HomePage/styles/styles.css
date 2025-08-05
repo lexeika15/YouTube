@@ -1,351 +1,358 @@
-body {
-    margin: 0;
+*, *::before, *::after { 
+    box-sizing: border-box; 
 }
 
-html {
-    font-size: 62.5%;
+html, body { 
+    max-width: 100vw; 
+    overflow-x: hidden; 
 }
 
-.width_container {
-    flex-grow: 1700;
+:root {
+  --color-primary: #ff0000;
+  --color-dark: #19202c;
+  --color-gray: #c2c2c2;
+  --color-light-gray: #ebebeb;
+  --color-icon-gray: #898989;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-text-dark: #30384c;
+
+  --fs-small: 1.3rem;
+  --fs-base: 1.6rem;
+  --fs-medium: 1.8rem;
+  --fs-large: 2rem;
+  --fs-xlarge: 2.6rem;
+
+  --avatar-size: 50px;
+  --small-avatar: 32px;
+  --border-radius: 14px;
+  --small-border-radius: 12px;
+  --duration-height: 24px;
+  --subscribe-height: 40px;
+
+  --gap-small: 10px;
+  --gap-medium: 20px;
+  --gap-large: 28px;
+  --section-margin: 50px;
 }
 
-#personal_videos,
-#recommended_videos,
-#food_drink_videos {
-    margin-bottom: 50px;
+html { 
+    font-size: 62.5%; 
 }
 
-.header_section {
-    display: flex;
-    justify-content: space-between;
+body { 
+    margin: 0; 
+    font-family: 'Mulish', sans-serif; 
 }
 
-.header_logo,
-.button_arrows {
-    display: flex;
-    gap: 20px;
-}
-
-.header_section img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.header_section  h1 {
-    font-family: 'Mulish', sans-serif;
-    white-space: nowrap;
-    font-weight: 700;
-    font-size: 2.6rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    margin: 12px 0 5px 0;
-}
-
-.scroll_arrows_container {
-    display: flex;
-    gap: 10px;
-    margin: 22px 180px 0 0;
-}
-
-.scroll_arrows_container img {
-    width: 28px;
-    height: 28px;
-    margin: 0;
-}
-
-.videos_container{
-    display: flex;   
-    gap: clamp(10px, 2vw, 32px);
-    margin-top: 28px;
-}
-
-.personal_video,
-.recommended_video,
-.food_video {
-    flex: 1 1;
-    position: relative;
-}
-
-.personal_video img,
-.recommended_video img,
-.food_video img {
-    width: 100%;
-    height: 150px;
-    border-radius: 14px;
-    object-fit: cover;
-    display: block;
-}
-
-.video_duration {
-    position: absolute;
-    top: 116px;
-    right: 10px;
-    background-color: black;
-    opacity: 70%;
-    width: 47px;
-    height: 24px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
+.youtube_header,
+.logo_youtube_search,
+.logo_youtube_stripes,
+.logo_youtube,
+.header_icons {
+    display: flex; 
     align-items: center;
 }
 
-.video_duration span {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: white;
+.youtube_header {
+    justify-content: space-between;
+    padding: 20px 0 0 30px;
 }
 
-.videos_container h2{
-    font-family: 'Mulish', sans-serif;
+.logo_youtube_search { 
+    gap: 56px; 
+}
+
+.logo_youtube_stripes { 
+    gap: 28px; 
+}
+
+.logo_youtube { 
+    gap: 3px; 
+}
+
+.logo_youtube img { 
+    width: 38px; 
+    height: 25px; 
+}
+
+.logo_youtube span {
+    font-family: 'Roboto', sans-serif; 
     font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #19202C;
+    font-size: var(--fs-large);
+    color: var(--color-black);
+    letter-spacing: -1px;
+}
+
+.search_wrapper { 
+    width: 830px; 
+    position: relative; 
+}
+
+.custom_input {
+    width: 100%; 
+    height: 44px;
+    font-family: inherit; 
+    font-weight: 400; 
+    font-size: var(--fs-base);
+    padding: 0 12px; 
+    background: var(--color-light-gray); 
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-light-gray); 
+    border-radius: 22px; 
+    opacity: 0.4;
+}
+
+.search_wrapper img {
+    position: absolute; 
+    width: 19px; 
+    height: 19px;
+    top: 50%; 
+    right: 18px; 
+    transform: translateY(-50%);
+}
+
+.header_icons { 
+    gap: 50px; 
+    margin-right: 70px; }
+
+.header_icons img { 
+    width: 24px; 
+    height: 22px; 
+}
+
+.header_icons .user { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+}
+
+.notifications_container { 
+    position: relative; 
+}
+
+.notifications_badge {
+    position: absolute; 
+    top: -10px; 
+    right: -8px;
+    background: var(--color-primary); 
+    color: var(--color-white); 
+    font-weight: 700;
+    font-size: 1.4rem; 
+    padding: 2px 6px; 
+    border-radius: 50%;
+}
+
+.main_layout { 
+    display: flex; 
+    gap: 66px; 
+    padding: 50px 0 0 30px; 
+}
+
+.sidebar { 
+    width: 160px; 
+    white-space: nowrap; 
+}
+
+.navigation_bar, .subscriptions_list {
+    display: flex; 
+    flex-direction: column;
+}
+
+.navigation_bar { 
+    gap: var(--gap-large); 
+    margin-bottom: 58px; 
+}
+
+.subscriptions_list { 
+    gap: 24px; 
+    margin-bottom: 104px; 
+}
+
+.navigation_bar_element, .subscriptions_list_element, .settings {
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    justify-content: flex-start;
+}
+
+.navigation_bar_element img, .settings img { 
+    width: 20px; 
+    height: 20px; 
+}
+
+.navigation_bar_element.show_more img { 
+    height: 8px; 
+}
+
+.navigation_bar_element span,
+.subscriptions_list_element span,
+.settings span {
+    font-size: var(--fs-base); 
+    color: var(--color-icon-gray); 
+    white-space: nowrap;
+}
+
+.home .navigation_bar_element span { 
+    color: var(--color-primary); 
+}
+
+.subscriptions_header {
+    font-weight: 700; 
+    font-size: var(--fs-medium); 
+    margin-bottom: 30px; 
+    color: var(--color-black);
+}
+
+.subscriptions_list_element { 
+    gap: 10px; 
+}
+
+.subscriptions_list_element img { 
+    width: 26px; 
+    height: 26px; 
+    border-radius: 50%; 
+}
+
+.settings { 
+    margin-bottom: 40px; 
+}
+
+.width_container { 
+    width: 1700px; 
+}
+
+#personal_videos, #recommended_videos, #food_drink_videos { 
+    margin-bottom: var(--section-margin); 
+}
+
+.header_section { 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.header_logo, .button_arrows { 
+    display: flex; 
+    gap: var(--gap-medium); 
+}
+
+.header_section img { 
+    width: var(--avatar-size); 
+    height: var(--avatar-size); 
+    border-radius: 50%; 
+}
+
+.header_section h1 {
+    font-weight: 700; 
+    font-size: var(--fs-large); 
+    line-height: 100%; 
+    margin: 12px 0 5px 0; 
+    white-space: nowrap;
+}
+
+.scroll_arrows_container { 
+    display: flex; 
+    gap: var(--gap-small); 
+    margin: 22px 180px 0 0; 
+}
+
+.scroll_arrows_container img { 
+    width: 28px; 
+    height: 28px; 
+}
+
+.videos_container { 
+    display: flex; 
+    gap: 32px; 
+    margin-top: var(--gap-large); 
+}
+
+.personal_video, .recommended_video, .food_video { 
+    flex: 1 1; 
+    position: relative; 
+}
+
+.personal_video img, .food_video img { 
+    width: 100%; 
+    height: 150px; 
+    border-radius: var(--border-radius); 
+    object-fit: cover; 
+    display: block; 
+}
+
+.recommended_video img { 
+    width: 100%; 
+    height: 250px; 
+    border-radius: var(--border-radius); 
+    object-fit: cover; 
+    display: block; 
+}
+
+.video_duration {
+    position: absolute; 
+    top: 116px; 
+    right: 10px; 
+    background: var(--color-black); 
+    opacity: 0.7;
+    width: 47px; 
+    height: var(--duration-height); 
+    border-radius: var(--small-border-radius);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.recommended_video .video_duration { 
+    top: 216px; 
+}
+
+.video_duration span { 
+    font-weight: 400; 
+    font-size: var(--fs-small); 
+    color: var(--color-white); 
+}
+
+.videos_container h2 {
+    font-weight: 700; 
+    font-size: var(--fs-base); 
+    color: var(--color-black); 
     margin: 10px 0 4px 0;
 }
 
 .video_details {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 8px;
 }
 
 .video_details span,
 #food_drink_videos .header_section span,
 .subscribe_button {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #C2C2C2;
+    font-weight: 400; 
+    font-size: var(--fs-small); 
+    color: var(--color-gray);
 }
 
-.recommended_video img {
-    height: 250px;
+#food_drink_videos .header_section span { 
+    font-size: var(--fs-base); 
+    margin-top: 20px; 
+    white-space: nowrap; 
 }
 
-.recommended_video .video_duration {
-    top: 216px;
-}
-
-#food_drink_videos .header_section span {
-    font-size: 1.6rem;
-    margin-top: 20px;
-    white-space: nowrap;
-}
-
-.button_arrows {
-    gap: 34px;
+.button_arrows { 
+    gap: 34px; 
 }
 
 .subscribe_button {
-    width: 154px;
-    height: 40px;
-    border: none;
+    width: 154px; 
+    height: var(--subscribe-height); 
+    border: none; 
     border-radius: 20px;
-    background-color: red ;
-    font-size: 1.6rem;
-    color: white;
-    margin-top: 10px;
-    white-space: nowrap;
+    background: var(--color-primary); 
+    color: var(--color-white); 
+    margin-top: 10px; 
+    font-size: var(--fs-base);
+    white-space: nowrap; 
     flex-shrink: 0;
-}
-
-.sidebar {
-    flex-grow: 160;
-}
-
-.navigation_bar,
-.subscriptions_list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 28px;
-    margin-bottom: 58px;
-}
-
-.navigation_bar_element,
-.subscriptions_list_element,
-.settings {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 12px;
-}
-
-.navigation_bar_element img,
-.settings img {
-    width: 20px;
-    height: 20px;
-}
-
-.navigation_bar_element.show_more img {
-    height: 8px;
-}
-
-.navigation_bar_element span,
-.subscriptions_list_element span,
-.settings span {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #898989;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.navigation_bar_element.home span {
-    color: #FF0000;
-}
-
-.navigation_bar_element.subscriptions {
-    padding-bottom: 32px;
-}
-
-.subscriptions_list {
-    gap: 24px;
-    margin-bottom: 104px;
-}
-
-.subscriptions_header {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 100%;
-    letter-spacing: 0px;
-    color: #000000;
-    margin: 0 0 30px 0;
-}
-
-.subscriptions_list_element {
-    gap: 10px;
-}
-
-.subscriptions_list_element img {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-}
-
-.settings {
-    margin-bottom: 40px;
-}
-
-.main_layout {
-    display: flex;
-    gap: 66px;
-    padding: 50px 0 0 30px;
-}
-
-.youtube_header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0 0 30px;
-}
-
-.logo_youtube_search,
-.logo_youtube_stripes,
-.logo_youtube,
-.header_icons {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.logo_youtube_stripes img {
-    width: 20px;
-    height: 17px;
-}
-
-.logo_youtube {
-    gap: 3px;
-}
-
-.logo_youtube_search {
-    gap: 72px;
-}
-
-.logo_youtube img {
-    width: 38px;
-    height: 25px;
-}
-
-.logo_youtube span {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700; 
-    font-size: 2rem;
-    color: #000000;
-    letter-spacing: -1px;
-}
-
-.search_wrapper {
-    width: 830px;
-    position: relative;
-}
-
-.custom_input {
-    width: 100%;
-    height: 44px;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
-    padding: 0 12px;
-    background-color: #EBEBEB;
-    color: #30384C;
-    border: 1px solid #EBEBEB;
-    border-radius: 22px;
-    opacity: 40%;
-    box-sizing: border-box;
-}
-
-.search_wrapper img {
-    position: absolute;
-    width: 19px;
-    height: 19px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 18px;
-}
-
-.header_icons {
-    gap: 50px;
-    margin-right: 70px;
-}
-
-.header_icons img {
-    width: 24px;
-    height: 22px;
-}
-
-.header_icons .user {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.notifications_container {
-    position: relative;
-}
-
-.notifications_badge {
-    position: absolute;
-    top: -10px;
-    right: -8px;
-    background-color: #ff0000;
-    color: white;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    padding: 2px 6px;
-    border-radius: 50%;
-    text-align: center;
 }
