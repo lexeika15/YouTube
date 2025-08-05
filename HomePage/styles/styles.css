@@ -356,3 +356,94 @@ body {
     white-space: nowrap; 
     flex-shrink: 0;
 }
+
+@media (min-width:1200px) and (max-width:1919px) {
+    .videos_container .personal_video:nth-last-child(-n+2),
+    .videos_container .food_video:nth-last-child(-n+2) {
+        display: none; 
+}
+
+    .videos_container { 
+        gap: var(--gap-medium); 
+    }
+
+    .main_layout { 
+        gap: 50px; 
+        padding: 28px 0 0 14px; 
+    }
+
+    .sidebar { 
+        flex-grow: 0; 
+        flex-shrink: 0; 
+    }
+
+    .width_container { 
+        flex: 1 1 0; 
+        min-width: 0; 
+        width: auto; 
+    }
+
+    .youtube_header { 
+        padding: 15px 0 0 16px; 
+    }
+
+    .logo_youtube_stripes img { 
+        width: 17px; 
+        height: 14px; 
+    }
+
+    .logo_youtube { 
+        gap: 2px; 
+    }
+
+    .logo_youtube img { 
+        width: 32px; 
+        height: 21px; 
+    }
+
+    .logo_youtube span { 
+        font-size: var(--fs-base); 
+    }
+
+    .logo_youtube_search { 
+        gap: 64px; 
+    }
+
+    .search_wrapper { 
+        width: 500px; 
+    }
+
+    .custom_input { 
+        height: 38px; 
+        font-size: var(--fs-small); 
+        border-radius: 18px; 
+    }
+
+    .search_wrapper img { 
+        width: 16px; 
+        height: 16px; 
+        right: 12px; 
+    }
+
+    .header_icons { 
+        gap: var(--gap-large); 
+        margin-right: 24px; 
+    }
+
+    .header_icons img { 
+        width: 20px; 
+        height: 18px; 
+    }
+
+    .header_icons .user { 
+        width: var(--small-avatar); 
+        height: var(--small-avatar); 
+    }
+
+    .notifications_badge { 
+        font-size: 1.1rem; 
+        padding: 2px 4px; 
+        top: -7px; 
+        right: -6px; 
+    }
+}
