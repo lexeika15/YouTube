@@ -447,3 +447,229 @@ body {
         right: -6px; 
     }
 }
+
+@media (min-width:768px) and (max-width:1199px) {
+    .main_layout { 
+        flex-direction: row; 
+        gap: 24px; 
+        padding: 14px 0 0 8px; 
+    }
+
+    .sidebar { 
+        width: 110px; 
+        min-width: 90px; 
+        max-width: 140px; 
+        flex: 0 0 auto; 
+        white-space: nowrap; 
+    }
+
+    .width_container { 
+        width: auto; 
+        min-width: 0; 
+        flex: 1 1 0; 
+        padding: 0 4px; 
+    }
+
+    .youtube_header { 
+        padding: 10px 0 0 8px; 
+    }
+
+    .logo_youtube_stripes img { 
+        width: 13px; 
+        height: 11px; 
+    }
+
+    .logo_youtube { 
+        gap: 1px; 
+    }
+
+    .logo_youtube img { 
+        width: 24px; 
+        height: 16px; 
+    }
+
+    .logo_youtube span { 
+        font-size: 1.1rem; 
+    }
+
+    .logo_youtube_search { 
+        gap: var(--gap-large); 
+    }
+
+    .search_wrapper { 
+        width: 210px; 
+    }
+
+    .custom_input { 
+        height: 32px; 
+        font-size: 1rem; 
+        border-radius: var(--small-border-radius); 
+        padding: 0 8px; 
+    }
+
+    .search_wrapper img { 
+        width: 12px; 
+        height: 12px; 
+        right: 8px; 
+    }
+
+    .header_icons { 
+        gap: 14px; 
+        margin-right: 8px; 
+    }
+
+    .header_icons img { 
+        width: 16px; 
+        height: 14px; 
+    }
+
+    .header_icons .user { 
+        width: 22px; 
+        height: 22px; 
+    }
+
+    .notifications_badge { 
+        font-size: 0.8rem; 
+        padding: 1px 3px; 
+        top: -4px; 
+        right: -4px; 
+    }
+
+    #personal_videos, #recommended_videos, #food_drink_videos { 
+        margin-bottom: 24px; 
+    }
+
+    .header_section { 
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .header_section img { 
+        width: 32px; 
+        height: 32px; 
+    }
+
+    .header_section h1 { 
+        font-size: 1.2rem; 
+        margin: 6px 0 2px 0; 
+    }
+
+    .scroll_arrows_container { 
+        gap: 6px; 
+        margin: 10px 30px 0 0; 
+    }
+
+    .scroll_arrows_container img { 
+        width: 18px; 
+        height: 18px; 
+    }
+
+    .videos_container { 
+        gap: clamp(4px, 1vw, 12px); 
+        margin-top: 14px; 
+    }
+
+    .personal_video img, .food_video img { 
+        height: 90px; 
+        border-radius: 8px; 
+    }
+
+    .recommended_video img { 
+        height: 120px; 
+    }
+
+    .video_duration {
+        top: 66px; 
+        right: 6px; 
+        min-width: 32px; 
+        height: 18px; 
+        padding: 0 8px; 
+        border-radius: 999px; 
+        box-sizing: border-box;
+    }
+
+    .recommended_video .video_duration { 
+        top: 98px; 
+    }
+
+    .video_duration span { 
+        font-size: 0.9rem; 
+    }
+
+    .videos_container h2 { 
+        font-size: 1.1rem; 
+        margin: 7px 0 2px 0; 
+    }
+
+    .video_details span, #food_drink_videos .header_section span, .subscribe_button { 
+        font-size: 0.95rem; 
+    }
+
+    #food_drink_videos .header_section span { 
+        font-size: 1.1rem; 
+        margin-top: 8px; 
+    }
+
+    .button_arrows { 
+        gap: 18px; 
+    }
+
+    .subscribe_button { 
+        width: 100px; 
+        height: 28px; 
+        font-size: 1rem; 
+        margin-top: 4px; 
+        border-radius: var(--border-radius); 
+    }
+
+    .navigation_bar { 
+        gap: 14px; 
+        margin-bottom: 20px; 
+    }
+
+    .navigation_bar_element, .subscriptions_list_element, .settings { 
+        gap: 6px; 
+    }
+
+    .navigation_bar_element img, .settings img { 
+        width: 13px; 
+        height: 13px; 
+    }
+
+    .navigation_bar_element.show_more img { 
+        height: 6px; 
+    }
+
+    .navigation_bar_element span, .subscriptions_list_element span, .settings span { 
+        font-size: 1.1rem; 
+    }
+
+    .subscriptions_list { 
+        gap: var(--gap-small); 
+        margin-bottom: 100px; 
+    }
+
+    .subscriptions_header { 
+        font-size: 1.2rem; 
+        margin: 0 0 12px 0; 
+    }
+
+    .subscriptions_list_element { 
+        gap: 6px; 
+    }
+
+    .subscriptions_list_element img { 
+        width: 16px; 
+        height: 16px; 
+    }
+
+    .settings { 
+        margin-bottom: 12px; 
+    }
+
+    .videos_container .personal_video:nth-last-child(-n+3),
+    .videos_container .food_video:nth-last-child(-n+3),
+    .videos_container .recommended_video:last-child { 
+        display: none; 
+    }
+}
