@@ -67,6 +67,10 @@ body {
     gap: 28px; 
 }
 
+.menu {
+    cursor: pointer;
+}
+
 .logo_youtube { 
     gap: 3px; 
 }
@@ -150,8 +154,13 @@ body {
 }
 
 .sidebar { 
-    width: 160px; 
+    width: 160px;
+    display: none; 
     white-space: nowrap; 
+}
+
+.sidebar.active {
+    display: block;
 }
 
 .navigation_bar, .subscriptions_list {
@@ -714,7 +723,7 @@ body {
         transform: translateY(-50%); 
     }
 
-    .menu, .search_wrapper > :not(.search), .header_icons > :not(.user) { 
+    .search_wrapper > :not(.search), .header_icons > :not(.user) { 
         display: none; 
     }
 
