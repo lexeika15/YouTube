@@ -1,0 +1,866 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+html, body { 
+    max-width: 100vw; 
+    overflow-x: hidden; 
+}
+
+:root {
+  --color-primary: #ff0000;
+  --color-dark: #19202c;
+  --color-gray: #c2c2c2;
+  --color-light-gray: #ebebeb;
+  --color-icon-gray: #898989;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-text-dark: #30384c;
+
+  --fs-small: 1.3rem;
+  --fs-base: 1.6rem;
+  --fs-medium: 1.8rem;
+  --fs-large: 2rem;
+  --fs-xlarge: 2.6rem;
+
+  --avatar-size: 50px;
+  --small-avatar: 32px;
+  --border-radius: 14px;
+  --small-border-radius: 12px;
+  --duration-height: 24px;
+  --subscribe-height: 40px;
+
+  --gap-small: 10px;
+  --gap-medium: 20px;
+  --gap-large: 28px;
+  --section-margin: 50px;
+}
+
+html { 
+    font-size: 62.5%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: 'Mulish', sans-serif; 
+}
+
+.youtube_header,
+.logo_youtube_search,
+.logo_youtube_stripes,
+.logo_youtube,
+.header_icons {
+    display: flex; 
+    align-items: center;
+}
+
+.youtube_header {
+    justify-content: space-between;
+    padding: 20px 0 0 30px;
+}
+
+.logo_youtube_search { 
+    gap: 56px; 
+}
+
+.logo_youtube_stripes { 
+    gap: 28px; 
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.logo_youtube { 
+    gap: 3px; 
+}
+
+.logo_youtube img { 
+    width: 38px; 
+    height: 25px; 
+}
+
+.logo_youtube span {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    font-size: var(--fs-large);
+    color: var(--color-black);
+    letter-spacing: -1px;
+}
+
+.search_wrapper { 
+    width: 830px; 
+    position: relative; 
+}
+
+.custom_input {
+    width: 100%; 
+    height: 44px;
+    font-family: inherit; 
+    font-weight: 400; 
+    font-size: var(--fs-base);
+    padding: 0 12px; 
+    background: var(--color-light-gray); 
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-light-gray); 
+    border-radius: 22px; 
+    opacity: 0.4;
+}
+
+.search_wrapper img {
+    position: absolute; 
+    width: 19px; 
+    height: 19px;
+    top: 50%; 
+    right: 18px; 
+    transform: translateY(-50%);
+}
+
+.header_icons { 
+    gap: 50px; 
+    margin-right: 70px; }
+
+.header_icons img { 
+    width: 24px; 
+    height: 22px; 
+}
+
+.header_icons .user { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+}
+
+.notifications_container { 
+    position: relative; 
+}
+
+.notifications_badge {
+    position: absolute; 
+    top: -10px; 
+    right: -8px;
+    background: var(--color-primary); 
+    color: var(--color-white); 
+    font-weight: 700;
+    font-size: 1.4rem; 
+    padding: 2px 6px; 
+    border-radius: 50%;
+}
+
+.main_layout { 
+    display: flex; 
+    gap: 66px; 
+    padding: 50px 0 0 30px; 
+}
+
+.sidebar { 
+    width: 160px;
+    display: none; 
+    white-space: nowrap; 
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.navigation_bar, .subscriptions_list {
+    display: flex; 
+    flex-direction: column;
+}
+
+.navigation_bar { 
+    gap: var(--gap-large); 
+    margin-bottom: 58px; 
+}
+
+.subscriptions_list { 
+    gap: 24px; 
+    margin-bottom: 104px; 
+}
+
+.navigation_bar_element, .subscriptions_list_element, .settings {
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    justify-content: flex-start;
+}
+
+.navigation_bar_element img, .settings img { 
+    width: 20px; 
+    height: 20px; 
+}
+
+.navigation_bar_element.show_more img { 
+    height: 8px; 
+}
+
+.navigation_bar_element span,
+.subscriptions_list_element span,
+.settings span {
+    font-size: var(--fs-base); 
+    color: var(--color-icon-gray); 
+    white-space: nowrap;
+}
+
+.home .navigation_bar_element span { 
+    color: var(--color-primary); 
+}
+
+.subscriptions_header {
+    font-weight: 700; 
+    font-size: var(--fs-medium); 
+    margin-bottom: 30px; 
+    color: var(--color-black);
+}
+
+.subscriptions_list_element { 
+    gap: 10px; 
+}
+
+.subscriptions_list_element img { 
+    width: 26px; 
+    height: 26px; 
+    border-radius: 50%; 
+}
+
+.settings { 
+    margin-bottom: 40px; 
+}
+
+.width_container { 
+    width: 1700px; 
+}
+
+#personal_videos, #recommended_videos, #food_drink_videos { 
+    margin-bottom: var(--section-margin); 
+}
+
+.header_section { 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.header_logo, .button_arrows { 
+    display: flex; 
+    gap: var(--gap-medium); 
+}
+
+.header_section img { 
+    width: var(--avatar-size); 
+    height: var(--avatar-size); 
+    border-radius: 50%; 
+}
+
+.header_section h1 {
+    font-weight: 700; 
+    font-size: var(--fs-large); 
+    line-height: 100%; 
+    margin: 12px 0 5px 0; 
+    white-space: nowrap;
+}
+
+.scroll_arrows_container { 
+    display: flex; 
+    gap: var(--gap-small); 
+    margin: 22px 180px 0 0; 
+}
+
+.scroll_arrows_container img { 
+    width: 28px; 
+    height: 28px; 
+}
+
+.videos_container { 
+    display: flex; 
+    gap: 32px; 
+    margin-top: var(--gap-large); 
+}
+
+.personal_video, .recommended_video, .food_video { 
+    flex: 1 1; 
+    position: relative; 
+}
+
+.personal_video img, .food_video img { 
+    width: 100%; 
+    height: 150px; 
+    border-radius: var(--border-radius); 
+    object-fit: cover; 
+    display: block; 
+}
+
+.recommended_video img { 
+    width: 100%; 
+    height: 250px; 
+    border-radius: var(--border-radius); 
+    object-fit: cover; 
+    display: block; 
+}
+
+.video_duration {
+    position: absolute; 
+    top: 116px; 
+    right: 10px; 
+    background: var(--color-black); 
+    opacity: 0.7;
+    width: 47px; 
+    height: var(--duration-height); 
+    border-radius: var(--small-border-radius);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.recommended_video .video_duration { 
+    top: 216px; 
+}
+
+.video_duration span { 
+    font-weight: 400; 
+    font-size: var(--fs-small); 
+    color: var(--color-white); 
+}
+
+.videos_container h2 {
+    font-weight: 700; 
+    font-size: var(--fs-base); 
+    color: var(--color-black); 
+    margin: 10px 0 4px 0;
+}
+
+.video_details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.video_details span,
+#food_drink_videos .header_section span,
+.subscribe_button {
+    font-weight: 400; 
+    font-size: var(--fs-small); 
+    color: var(--color-gray);
+}
+
+#food_drink_videos .header_section span { 
+    font-size: var(--fs-base); 
+    margin-top: 20px; 
+    white-space: nowrap; 
+}
+
+.button_arrows { 
+    gap: 34px; 
+}
+
+.subscribe_button {
+    width: 154px; 
+    height: var(--subscribe-height); 
+    border: none; 
+    border-radius: 20px;
+    background: var(--color-primary); 
+    color: var(--color-white); 
+    margin-top: 10px; 
+    font-size: var(--fs-base);
+    white-space: nowrap; 
+    flex-shrink: 0;
+}
+
+@media (min-width:1200px) and (max-width:1919px) {
+    .videos_container .personal_video:nth-last-child(-n+2),
+    .videos_container .food_video:nth-last-child(-n+2) {
+        display: none; 
+}
+
+    .videos_container { 
+        gap: var(--gap-medium); 
+    }
+
+    .main_layout { 
+        gap: 50px; 
+        padding: 28px 0 0 14px; 
+    }
+
+    .sidebar { 
+        flex-grow: 0; 
+        flex-shrink: 0; 
+    }
+
+    .width_container { 
+        flex: 1 1 0; 
+        min-width: 0; 
+        width: auto; 
+    }
+
+    .youtube_header { 
+        padding: 15px 0 0 16px; 
+    }
+
+    .logo_youtube_stripes img { 
+        width: 17px; 
+        height: 14px; 
+    }
+
+    .logo_youtube { 
+        gap: 2px; 
+    }
+
+    .logo_youtube img { 
+        width: 32px; 
+        height: 21px; 
+    }
+
+    .logo_youtube span { 
+        font-size: var(--fs-base); 
+    }
+
+    .logo_youtube_search { 
+        gap: 64px; 
+    }
+
+    .search_wrapper { 
+        width: 500px; 
+    }
+
+    .custom_input { 
+        height: 38px; 
+        font-size: var(--fs-small); 
+        border-radius: 18px; 
+    }
+
+    .search_wrapper img { 
+        width: 16px; 
+        height: 16px; 
+        right: 12px; 
+    }
+
+    .header_icons { 
+        gap: var(--gap-large); 
+        margin-right: 24px; 
+    }
+
+    .header_icons img { 
+        width: 20px; 
+        height: 18px; 
+    }
+
+    .header_icons .user { 
+        width: var(--small-avatar); 
+        height: var(--small-avatar); 
+    }
+
+    .notifications_badge { 
+        font-size: 1.1rem; 
+        padding: 2px 4px; 
+        top: -7px; 
+        right: -6px; 
+    }
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+    .main_layout { 
+        flex-direction: row; 
+        gap: 24px; 
+        padding: 14px 0 0 8px; 
+    }
+
+    .sidebar { 
+        width: 110px; 
+        min-width: 90px; 
+        max-width: 140px; 
+        flex: 0 0 auto; 
+        white-space: nowrap; 
+    }
+
+    .width_container { 
+        width: auto; 
+        min-width: 0; 
+        flex: 1 1 0; 
+        padding: 0 4px; 
+    }
+
+    .youtube_header { 
+        padding: 10px 0 0 8px; 
+    }
+
+    .logo_youtube_stripes img { 
+        width: 13px; 
+        height: 11px; 
+    }
+
+    .logo_youtube { 
+        gap: 1px; 
+    }
+
+    .logo_youtube img { 
+        width: 24px; 
+        height: 16px; 
+    }
+
+    .logo_youtube span { 
+        font-size: 1.1rem; 
+    }
+
+    .logo_youtube_search { 
+        gap: var(--gap-large); 
+    }
+
+    .search_wrapper { 
+        width: 210px; 
+    }
+
+    .custom_input { 
+        height: 32px; 
+        font-size: 1rem; 
+        border-radius: var(--small-border-radius); 
+        padding: 0 8px; 
+    }
+
+    .search_wrapper img { 
+        width: 12px; 
+        height: 12px; 
+        right: 8px; 
+    }
+
+    .header_icons { 
+        gap: 14px; 
+        margin-right: 8px; 
+    }
+
+    .header_icons img { 
+        width: 16px; 
+        height: 14px; 
+    }
+
+    .header_icons .user { 
+        width: 22px; 
+        height: 22px; 
+    }
+
+    .notifications_badge { 
+        font-size: 0.8rem; 
+        padding: 1px 3px; 
+        top: -4px; 
+        right: -4px; 
+    }
+
+    #personal_videos, #recommended_videos, #food_drink_videos { 
+        margin-bottom: 24px; 
+    }
+
+    .header_section { 
+        flex-direction: row; 
+        align-items: center; 
+    }
+
+    .header_section img { 
+        width: 32px; 
+        height: 32px; 
+    }
+
+    .header_section h1 { 
+        font-size: 1.2rem; 
+        margin: 6px 0 2px 0; 
+    }
+
+    .scroll_arrows_container { 
+        gap: 6px; 
+        margin: 10px 30px 0 0; 
+    }
+
+    .scroll_arrows_container img { 
+        width: 18px; 
+        height: 18px; 
+    }
+
+    .videos_container { 
+        gap: clamp(4px, 1vw, 12px); 
+        margin-top: 14px; 
+    }
+
+    .personal_video img, .food_video img { 
+        height: 90px; 
+        border-radius: 8px; 
+    }
+
+    .recommended_video img { 
+        height: 120px; 
+    }
+
+    .video_duration {
+        top: 66px; 
+        right: 6px; 
+        min-width: 32px; 
+        height: 18px; 
+        padding: 0 8px; 
+        border-radius: 999px; 
+        box-sizing: border-box;
+    }
+
+    .recommended_video .video_duration { 
+        top: 98px; 
+    }
+
+    .video_duration span { 
+        font-size: 0.9rem; 
+    }
+
+    .videos_container h2 { 
+        font-size: 1.1rem; 
+        margin: 7px 0 2px 0; 
+    }
+
+    .video_details span, #food_drink_videos .header_section span, .subscribe_button { 
+        font-size: 0.95rem; 
+    }
+
+    #food_drink_videos .header_section span { 
+        font-size: 1.1rem; 
+        margin-top: 8px; 
+    }
+
+    .button_arrows { 
+        gap: 18px; 
+    }
+
+    .subscribe_button { 
+        width: 100px; 
+        height: 28px; 
+        font-size: 1rem; 
+        margin-top: 4px; 
+        border-radius: var(--border-radius); 
+    }
+
+    .navigation_bar { 
+        gap: 14px; 
+        margin-bottom: 20px; 
+    }
+
+    .navigation_bar_element, .subscriptions_list_element, .settings { 
+        gap: 6px; 
+    }
+
+    .navigation_bar_element img, .settings img { 
+        width: 13px; 
+        height: 13px; 
+    }
+
+    .navigation_bar_element.show_more img { 
+        height: 6px; 
+    }
+
+    .navigation_bar_element span, .subscriptions_list_element span, .settings span { 
+        font-size: 1.1rem; 
+    }
+
+    .subscriptions_list { 
+        gap: var(--gap-small); 
+        margin-bottom: 100px; 
+    }
+
+    .subscriptions_header { 
+        font-size: 1.2rem; 
+        margin: 0 0 12px 0; 
+    }
+
+    .subscriptions_list_element { 
+        gap: 6px; 
+    }
+
+    .subscriptions_list_element img { 
+        width: 16px; 
+        height: 16px; 
+    }
+
+    .settings { 
+        margin-bottom: 12px; 
+    }
+
+    .videos_container .personal_video:nth-last-child(-n+3),
+    .videos_container .food_video:nth-last-child(-n+3),
+    .videos_container .recommended_video:last-child { 
+        display: none; 
+    }
+}
+
+@media (min-width: 320px) and (max-width:767px) {
+    html, body { 
+        width: 100vw; 
+        overflow-x: hidden; 
+    }
+
+    .main_layout, .width_container, .sidebar, .youtube_header { 
+        max-width: 100vw; 
+        overflow-x: hidden; 
+    }
+
+    .youtube_header {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100vw; 
+        height: 50px; 
+        z-index: 120;
+        background: var(--color-white);
+        box-shadow: 0 1px 0 0 #F1F1F1, 0 2px 8px rgba(0,0,0,0.04);
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 0 16px; 
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .logo_youtube_search {
+        width: 90%; 
+        justify-content: flex-start; 
+        gap: var(--gap-small);
+    }
+
+    .search_wrapper .search { 
+        position: absolute; 
+        right: 24px; 
+        top: 50%; 
+        transform: translateY(-50%); 
+    }
+
+    .search_wrapper > :not(.search), .header_icons > :not(.user) { 
+        display: none; 
+    }
+
+    .logo_youtube { 
+        gap: 2px; 
+    }
+
+    .logo_youtube img { 
+        width: 37px; 
+        height: 25px; 
+    }
+
+    .logo_youtube span { 
+        font-size: var(--fs-small); 
+    }
+
+    .header_icons { 
+        margin: 0; 
+    }
+
+    .header_icons .user { 
+        width: 30px; 
+        height: 30px; 
+        border-radius: 50%; 
+    }
+
+    .main_layout { 
+        flex-direction: column; 
+        width: 100vw; 
+        padding: 10px 16px 0 16px; 
+        gap: 0; 
+        box-sizing: border-box; 
+    }
+
+    .width_container { 
+        width: 100%; 
+        margin: 0; 
+    }
+
+    .width_container > section:not(#personal_videos) { 
+        display: none; 
+    }
+
+    #personal_videos > .header_section { 
+        display: none; 
+    }
+    
+    #personal_videos { 
+        margin: 0; 
+    }
+
+    .videos_container { 
+        margin: 0; 
+        flex-wrap: wrap; 
+        gap: var(--gap-small); 
+        width: 100%; 
+    }
+
+    .personal_video {
+        min-width: 0;
+        max-width: 100%;
+        flex: 1 1 calc(50% - var(--gap-small));
+    }
+
+    .personal_video img { 
+        width: 100%; 
+    }
+
+    .sidebar {
+        position: fixed; 
+        left: 0; 
+        bottom: 0; 
+        width: 100vw; 
+        height: 61px; 
+        z-index: 100;
+        background: var(--color-white);
+        box-shadow: 0 -1px 0 0 #F1F1F1, 0 -2px 16px rgba(0,0,0,0.06);
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-around; 
+        padding: 0; 
+        margin: 0; 
+        border-radius: 0;
+    }
+
+    .subscriptions_header, .subscriptions_list, .settings { 
+        display: none; 
+    }
+
+    .navigation_bar {
+        flex-direction: row; 
+        gap: 0; 
+        margin: 0; 
+        width: 100vw; 
+        height: 100%; 
+        justify-content: space-around; 
+        align-items: center;
+    }
+
+    .navigation_bar_element {
+        flex-direction: column; 
+        gap: 5px; 
+        justify-content: center; 
+        align-items: center; 
+        width: 48px; 
+        height: 100%; 
+        margin: 0;
+    }
+
+    .navigation_bar_element:nth-child(n+5) { 
+        display: none; 
+    }
+
+    .navigation_bar_element img { 
+        width: 20px; 
+        height: 20px; 
+    }
+
+    .navigation_bar_element:first-child span { 
+        color: var(--color-primary); 
+    }
+
+    .navigation_bar_element span { 
+        font-size: 1rem; 
+        color: var(--color-icon-gray); 
+        display: block; 
+        margin: 0; 
+        padding: 0; 
+    }
+    
+    .main_layout > .sidebar { 
+        order: 2; 
+    }
+}
+
+@media (max-width: 480px) {
+    .personal_video { 
+        flex: 1 1 100%; 
+    }
+}
